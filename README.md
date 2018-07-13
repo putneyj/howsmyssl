@@ -25,4 +25,4 @@ while modifying the template. Typical use is simply:
 (Justrun has the benefit of controlling the lifecycle of a process, unlike
 most other file watch utilities.)
 
-[justrun]: https://github.com/jmhodges/justrun
+[justrun]: https://github.com/putneyj/justrun

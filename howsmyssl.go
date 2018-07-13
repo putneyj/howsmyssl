@@ -24,8 +24,8 @@ import (
 	"time"
 
 	"cloud.google.com/go/logging"
-	"github.com/jmhodges/howsmyssl/gzip"
-	tls "github.com/jmhodges/howsmyssl/tls110"
+	"github.com/putneyj/howsmyssl/gzip"
+	tls "github.com/putneyj/howsmyssl/tls110"
 	"golang.org/x/net/context"
 	"google.golang.org/api/option"
 )
@@ -591,7 +591,7 @@ type protoHandler struct {
 
 func (h protoHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	r.Header.Set(xForwardedProto, h.proto)
-	// TODO(jmhodges): gross hack in order to get ServeMux to match ports
+	// TODO(putneyj): gross hack in order to get ServeMux to match ports
 	// See https://golang.org/issue/10463
 	host, _, err := net.SplitHostPort(r.Host)
 	if err == nil {
